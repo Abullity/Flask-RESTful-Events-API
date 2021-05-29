@@ -1,6 +1,8 @@
 # RESTful Flask App
 A simple Flask based RESTful events/calendar Web API
 
+The project inspired by one of JetBrains Academy projects.
+
 # What does the API do
 
 API takes POST, GET and DELETE requests and updates, retrieves or delets an event 
