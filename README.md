@@ -68,7 +68,7 @@ you don't have to specify these and by default the app will be run on localhost 
   
   http://127.0.0.1:5000/event?start_time=2021-06-21&end_time=2021-08-20
   
-  to post your own event you could use python's requests module and its method post, or you could use [https://www.postman.com/](# Postman)
+  to post your own event you could use python's requests module and its method post, or you could use [Postman](# https://www.postman.com/)
   
  
   
