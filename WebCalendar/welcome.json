@@ -1,0 +1,49 @@
+{
+   "message":"VICTORIA VOBISCVM, this is my very first REST API!",
+   "routes":[
+      {
+         "description":"See every recorded event",
+         "path":"http://127.0.0.1:5000/event",
+         "methods":{
+            "GET":{
+               "filter_options":{
+                  "start_time":{
+                     "description":"Search for events starting from a specific date [Inclusive]",
+                     "route":"http://127.0.0.1:5000/event?start_time=YYYY-MM-DD"
+                  },
+                  "end_time":{
+                     "description":"Search for events up until the given date [Inclusive]",
+                     "route":"http://127.0.0.1:5000/event?end_time=YYYY-MM-DD"
+                  },
+                  "start_end":{
+                     "description":"Search for events from date up until the given date [Inclusive]",
+                     "route":"http://127.0.0.1:5000/event?start_time=YYYY-MM-DD&end_time=YYYY-MM-DD"
+                  }
+               }
+            },
+            "POST":{
+               "post-body_structure":{
+                  "event":"Name for an event",
+                  "date":"Date for an event in format YYYY-MM-DD",
+                  "location":"Location for an event"
+               }
+            }
+         }
+      },
+      {
+         "description":"GET method returns a specific event with known ID, DELETE - deletes",
+         "path":"http://127.0.0.1:5000/event/[known_event_id]",
+         "methods":[
+            "GET",
+            "DELETE"
+         ]
+      },
+      {
+         "description":"See all events that are due today",
+         "path":"http://127.0.0.1:5000/event/today",
+         "methods":[
+            "GET"
+         ]
+      }
+   ]
+}
