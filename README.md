@@ -14,6 +14,10 @@ an event is a json data, which has attributes:
 
 The API can retrieve all the events, an event by id or events filtered by starting and ending dates
 
+you could add any event you'd like but by default, app has couple of SpaceX flight events saved in database
+
+you can delete the database and it will be reinitialized from program launch
+
 all the data is saved in sqlite database and thus is persistent over program termination/relaunch
 
 detailed inforamtion on POST request's body data-format as well as routes and methods available for given routes are given on API's root page
