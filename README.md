@@ -14,6 +14,8 @@ an event is a json data, which has attributes:
 
 The API can retrieve all the events, an event by id or events filtered by starting and ending dates
 
+all the data is saved in sqlite database and thus is persistent over program termination/relaunch
+
 detailed inforamtion on POST request's body data-format as well as routes and methods available for given routes are given on API's root page
 
 # Installation and dependencies
@@ -42,6 +44,45 @@ The command takes two arguments host address and port,
 you don't have to specify these and by default the app will be run on localhost port 5000 ---> http://127.0.0.1:5000/
 
 
-# Routesu222008989u222008989ad54
+# Routes
 
-u222http://12u22200u222008989u2220089897.0.0.1:5000u222008989222008989u222008989ad54
+1) main route, sends information about other routes and their methods --> "/"
+
+
+2) event route, sends all events if query parameters not specified -->  "/event"
+  
+  You could send get request to event route with start_time and end_time parameteres,
+  which will retrieve events filter with lower or upper boundaries of event dates
+  
+  So a GET request could look like the following three:
+  
+  http://127.0.0.1:5000/event?start_time=2021-06-21   
+  
+  http://127.0.0.1:5000/event?end_time=2021-08-20
+  
+  http://127.0.0.1:5000/event?start_time=2021-06-21&end_time=2021-08-20
+  
+  to post your own event you could use python's requests module and its method post, or you could use [https://www.postman.com/](# Postman)
+  
+ 
+  
+  data for the POST method should have following attributes:
+  
+    "event": "Name for an event",
+    
+    "date": "Date for an event in format YYYY-MM-DD",
+    
+    "location": "Location for an event"
+    
+    
+3) single event by id route, gets an event if the id matches requested event id --> "/event/[known_event_id]"
+  
+  an exmaple would be a GET request http://127.0.0.1:5000/event/2 
+  
+  same route with DELETE method would delete the event from database
+  
+  this request would return event with ID of 2, if it exsisted
+  
+  
+4) today's events routes, returns all events that are due today --> "/event/today"
+
