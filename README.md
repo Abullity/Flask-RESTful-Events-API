@@ -85,10 +85,11 @@ you don't have to specify these and by default the app will be run on localhost 
   
   an exmaple would be a GET request http://127.0.0.1:5000/event/2 
   
-  same route with DELETE method would delete the event from database
   
   this request would return event with ID of 2, if it exsisted
-  
+
+
+same route with DELETE method would delete the event from database
   
 4) today's events routes, returns all events that are due today --> "/event/today"
 
