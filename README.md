@@ -36,15 +36,15 @@ After you have every package installed, execute run.py file, the rest should wor
 
 
 
-#Running the app
+# Running the app
 
 Open terminal in project's root directory and run the following command
 
-"python run.py"
+> "python run.py"
 
 or
 
-"python3 run.py"
+> "python3 run.py"
 
 The command takes two arguments host address and port,
 you don't have to specify these and by default the app will be run on localhost port 5000 ---> http://127.0.0.1:5000/
