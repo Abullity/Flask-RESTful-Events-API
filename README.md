@@ -1,6 +1,8 @@
 # RESTful Flask App
 A simple Flask based RESTful events/calendar Web API
 
+[Hosted on Heroku](https://restfuleventscalendar.herokuapp.com/)
+
 The project inspired by one of JetBrains Academy projects.
 
 # What does the API do
